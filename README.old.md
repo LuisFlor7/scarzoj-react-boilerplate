@@ -1,1 +1,0 @@
-# scarzo-react-boilerplate
