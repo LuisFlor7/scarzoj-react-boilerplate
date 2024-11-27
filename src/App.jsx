@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Container } from "react-bootstrap";
 
 import { NavBar } from "./components/NavBar";
 
@@ -15,8 +16,8 @@ export const App = () => {
 
   return (
     <>
-      <NavBar pageSetter={setCurrentPage} />
-      {pageMap[currentPage]}
+      <NavBar currentPage={currentPage} pageSetter={setCurrentPage} />
+      <Container>{pageMap[currentPage]}</Container>
     </>
   );
 };
