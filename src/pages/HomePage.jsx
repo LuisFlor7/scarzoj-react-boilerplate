@@ -1,10 +1,11 @@
+import React from "react";
 import { Container } from "react-bootstrap";
 
 function HomePage() {
   return (
     <>
-      <Container>
-        <h1>Bienvenido a la página</h1>
+      <Container className="mt-3">
+        <h1>Bienvenido a la página de inicio</h1>
       </Container>
     </>
   );
