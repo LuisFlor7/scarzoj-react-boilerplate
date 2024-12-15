@@ -1,0 +1,116 @@
+/* Estilo general */
+/* Estilo general del body */
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #e0f7ff; /* Azul cielo claro */
+  color: #333333; /* Texto en gris oscuro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Contenedor del Login */
+.login-container {
+  background: linear-gradient(
+    145deg,
+    #a2d9ff,
+    #d4f1ff
+  ); /* Degradado azul claro */
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  width: 350px;
+  text-align: center;
+}
+
+/* Logo del Login */
+.login-logo img {
+  width: 140px; /* Tamaño del logo */
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.4));
+}
+
+/* Título de la página */
+.login-title {
+  color: #004080; /* Azul oscuro que resalta */
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+/* Input de texto */
+.login-input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid #80bfff; /* Borde azul claro */
+  background-color: #ffffff; /* Fondo blanco */
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333333;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.login-input:focus {
+  border-color: #0080ff; /* Borde azul más fuerte en foco */
+}
+
+/* Opciones debajo del input */
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  margin: 10px 0;
+}
+
+.login-options a {
+  color: #0080ff; /* Azul vibrante */
+  text-decoration: none;
+}
+
+.login-options a:hover {
+  text-decoration: underline;
+}
+
+/* Botón de Acceder */
+.login-button {
+  background-color: #0080ff; /* Azul vibrante */
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #0059b3; /* Azul más oscuro al pasar el mouse */
+}
+
+/* Enlace de registro */
+.register-link {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #004080; /* Azul oscuro */
+}
+
+.register-link a {
+  color: #0080ff; /* Azul vibrante */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  .login-form {
+    width: 90%;
+  }
+}

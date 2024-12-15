@@ -2,18 +2,16 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Container } from "react-bootstrap";
 
-import NavBar from "./components/NavBar";
-import HomePage from "./pages/HomePage";
-import TimerPage from "./pages/TimerPage";
+import LogIn from "./pages/LogIn";
+import PreLogin from "./pages/PreLogin";
 
 export const App = () => {
   return (
     <Router>
-      <NavBar />
       <Container>
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/timer" element={<TimerPage />} />
+          <Route path="/" element={<PreLogin />} />
+          <Route path="/Login" element={<LogIn />} />
         </Routes>
       </Container>
     </Router>

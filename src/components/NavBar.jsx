@@ -6,7 +6,7 @@ import Navbar from "react-bootstrap/Navbar";
 
 const NavBar = () => {
   return (
-    <Navbar bg="dark" data-bs-theme="dark">
+    <Navbar bg="info" data-bs-theme="dark">
       <Container>
         <Navbar.Brand as={Link} to="/">
           React Timer
