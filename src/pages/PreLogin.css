@@ -21,7 +21,7 @@
 /* Texto "Toca para comenzar" */
 .tap-to-start {
   position: absolute;
-  bottom: 40px;
+  bottom: 50px;
   font-size: 1.5rem;
   color: #0078d4; /* Azul vibrante */
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
