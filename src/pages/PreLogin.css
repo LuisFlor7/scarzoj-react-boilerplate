@@ -51,8 +51,8 @@
 }
 
 .card3 {
-  bottom: 15%;
-  left: 40%;
+  bottom: 17%;
+  left: 42%;
   width: 80px;
   animation-delay: 4s;
 }
@@ -66,7 +66,7 @@
 }
 
 .card5 {
-  bottom: 40%;
+  bottom: 42%;
   left: 25%;
   width: 70px;
   animation-delay: 4s;
@@ -96,13 +96,51 @@
 }
 
 .card9 {
-  bottom: 25%;
-  left: 28%;
+  bottom: 28%;
+  left: 30%;
+  width: 45px;
+  animation-delay: 4s;
+  filter: blur(1px);
+}
+
+.card10 {
+  bottom: 15%;
+  right: 28%;
+  width: 60px;
+  animation-delay: 4s;
+}
+
+.card11 {
+  top: 18%;
+  right: 29%;
   width: 40px;
   animation-delay: 4s;
   filter: blur(1px);
 }
 
+.card12 {
+  top: 6%;
+  right: 50%;
+  width: 40px;
+  animation-delay: 4s;
+  filter: blur(1px);
+}
+
+.card13 {
+  bottom: 60%;
+  left: 30%;
+  width: 30px;
+  animation-delay: 4s;
+  filter: blur(1px);
+}
+
+.card14 {
+  bottom: 16%;
+  left: 28%;
+  width: 35px;
+  animation-delay: 4s;
+  filter: blur(1px);
+}
 /* Animación de flotación */
 @keyframes floatAnimation {
   0% {

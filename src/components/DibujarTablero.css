@@ -1,0 +1,43 @@
+.drawing-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.drawing-toolbar {
+  position: absolute;
+  top: 95px;
+  left: 50px;
+  z-index: 3;
+  display: flex;
+  gap: 10px;
+}
+
+.tool-button {
+  background-color: white;
+  border: 2px solid #000;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.tool-button.active {
+  background-color: #a0d3ff;
+  border-color: #0000ff;
+}
+
+.tool-button.clear {
+  background-color: #ffcccc;
+  border-color: #ff0000;
+}
+
+.drawing-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  cursor: crosshair;
+}

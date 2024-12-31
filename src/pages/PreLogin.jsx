@@ -2,6 +2,8 @@ import React from "react";
 import "./PreLogin.css";
 import { useNavigate } from "react-router-dom";
 
+//(A intentar) Que al inicio se vea el logo primero y despues van apareciendo las cartas.
+
 // Importa las imágenes
 import card1 from "./179.png";
 import card2 from "./178.png";
@@ -12,6 +14,11 @@ import card6 from "./155.png";
 import card7 from "./170.png";
 import card8 from "./175.png";
 import card9 from "./177.png";
+import card10 from "./182.png";
+import card11 from "./140.png";
+import card12 from "./128.png";
+import card13 from "./180.png";
+import card14 from "./147.png";
 import logo from "./Marca Hidden Diamond sin fondo.png";
 
 const PreLogin = () => {
@@ -34,6 +41,11 @@ const PreLogin = () => {
         <img src={card7} alt="Carta 7" className="card card7" />
         <img src={card8} alt="Carta 8" className="card card8" />
         <img src={card9} alt="Carta 9" className="card card9" />
+        <img src={card10} alt="Carta 10" className="card card10" />
+        <img src={card11} alt="Carta 11" className="card card11" />
+        <img src={card12} alt="Carta 12" className="card card12" />
+        <img src={card13} alt="Carta 13" className="card card13" />
+        <img src={card14} alt="Carta 14" className="card card14" />
       </div>
 
       {/* Logo */}

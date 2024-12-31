@@ -1,0 +1,72 @@
+/* Contenedor principal */
+.tablero-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #a0d3ff; /* Fondo azul */
+  overflow: hidden; /* Evitar desbordamiento */
+  padding: 0; /* Eliminar padding */
+}
+
+/* Herramientas (botones de dibujo) */
+.tablero-container .tool-buttons {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  gap: 10px;
+  z-index: 3;
+}
+
+.tool-buttons button {
+  background-color: white;
+  border: 2px solid #000;
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.tool-buttons button:hover {
+  background-color: #f0f0f0;
+}
+
+.tool-buttons button.active {
+  background-color: #4caf50; /* Verde activo */
+  color: white;
+}
+
+/* Botón de volver */
+.tablero-container .back-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 3;
+  background-color: #007bff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #0056b3; /* Azul más oscuro */
+}
+
+/* Canvas */
+.tablero-container canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: crosshair; /* Cursor de dibujo */
+  z-index: 2;
+  overflow: hidden; /* Evitar desbordamiento */
+}

@@ -15,13 +15,14 @@ body {
 .login-container {
   background: linear-gradient(
     145deg,
-    #a2d9ff,
+    #2089d4,
     #d4f1ff
   ); /* Degradado azul claro */
   border-radius: 12px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
   padding: 30px;
-  width: 350px;
+  width: 100%;
+  height: 100%;
   text-align: center;
 }
 
