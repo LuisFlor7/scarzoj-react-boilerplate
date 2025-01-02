@@ -38,6 +38,14 @@ const Game = () => {
     alert(`Respuesta: ${answer ? "Sí" : "No"}`);
   };
 
+  const handleNext = () => {
+    setSelectedCard((prev) => (prev + 1) % cards.length); // Avanza en el carrusel
+  };
+
+  const handlePrev = () => {
+    setSelectedCard((prev) => (prev - 1 + cards.length) % cards.length); // Retrocede en el carrusel
+  };
+
   return (
     <div className="game-container">
       <div className="top-corner-image">
@@ -57,27 +65,43 @@ const Game = () => {
         )}
       </div>
 
-      <div className="cards-carousel d-flex">
-        {cards.map((card, index) => (
-          <div
-            key={index}
-            className={`carta ${index === selectedCard ? "selected" : ""}`}
-            onClick={() => setSelectedCard(index)}
-          >
-            <div
-              className="question"
-              onClick={() => checkQuestion(card.topQuestion.id)}
-            >
-              {card.topQuestion.text}
-            </div>
-            <div
-              className="question"
-              onClick={() => checkQuestion(card.bottomQuestion.id)}
-            >
-              {card.bottomQuestion.text}
-            </div>
-          </div>
-        ))}
+      <div className="carousel-container">
+        <div className="cards-carousel d-flex">
+          {cards.map((card, index) => {
+            const position =
+              index === selectedCard
+                ? "center"
+                : index < selectedCard
+                  ? "left"
+                  : "right";
+            return (
+              <div
+                key={index}
+                className={`carta ${position}`}
+                onClick={() => setSelectedCard(index)}
+              >
+                <div
+                  className="questionTop"
+                  onClick={() => checkQuestion(card.topQuestion.id)}
+                >
+                  {card.topQuestion.text}
+                </div>
+                <div
+                  className="questionBottom"
+                  onClick={() => checkQuestion(card.bottomQuestion.id)}
+                >
+                  {card.bottomQuestion.text}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+        <button className="nav-button left" onClick={handlePrev}>
+          ◀
+        </button>
+        <button className="nav-button right" onClick={handleNext}>
+          ▶
+        </button>
       </div>
     </div>
   );
