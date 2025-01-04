@@ -8,14 +8,19 @@ const Difficulty = ({ onStartGame }) => {
   const navigate = useNavigate();
 
   const handleStartGame = () => {
-    // Redirigir a /Game
-    navigate("/Game");
+    difficulty === "beginner"
+      ? navigate("/GamePrincipiante")
+      : difficulty === "classic"
+        ? navigate("/GameClasico")
+        : difficulty === "expert"
+          ? navigate("/GameExperto")
+          : alert(
+              "Por favor selecciona un nivel de dificultad antes de continuar.",
+            );
   };
 
   return (
     <div className="selection-container">
-      <h1 className="selection-title">Elige tu configuración</h1>
-
       <div className="language-selection">
         <h2>Idioma:</h2>
         <div className="language-options">

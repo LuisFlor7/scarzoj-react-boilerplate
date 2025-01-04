@@ -1,12 +1,14 @@
 /* Contenedor principal del juego */
 .game-container {
+  height: 100vh; /* Ajusta el contenedor al 100% de la altura de la ventana */
+  width: 100vw; /* Ajusta el contenedor al 100% del ancho de la ventana */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 500vh;
   background: linear-gradient(145deg, #52b2f8, #d4f1ff);
-  overflow: hidden;
+  overflow: hidden; /* Evita el scroll dentro del contenedor */
+  position: relative; /* Asegura el control sobre elementos posicionados dentro */
 }
 
 /* Top Right Corner Image */
@@ -79,19 +81,31 @@
 
 /* Título del país */
 h1 {
+  position: fixed;
+  top: 280px;
   color: #333;
+}
+
+.carousel-container {
+  position: fixed; /* Fija el carrusel en la pantalla */
+  bottom: 20px; /* Margen inferior de 20px */
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centra verticalmente la carta y los botones */
+  padding: 10px;
+  overflow: hidden;
 }
 
 /* Carrusel de cartas */
 .card-carousel {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Mantén la carta centrada */
   align-items: center;
-  overflow-x: auto;
   width: 100%;
-  padding: 20px;
-  gap: 20px;
-  position: relative; /* Necesario para superposición */
+  transition: transform 0.5s ease; /* Suaviza el movimiento del carrusel */
+  position: relative; /* Necesario para posicionar los botones */
 }
 
 /* Carta */
@@ -100,57 +114,99 @@ h1 {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 100px;
-  height: 150px;
-  background: #ffffff;
-  border: 2px solid #ccc;
+  font-weight: bold;
+  padding: 20px;
+  width: 300px; /* Ajuste al tamaño reducido */
+  height: 250px;
+  background-image: url("../Media/Paises/pregunta.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 2px solid #000000;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.895);
   transition:
     transform 0.3s,
     border-color 0.3s,
     z-index 0.3s;
-  cursor: pointer;
   position: relative;
 }
 
-/* INACTIVO POR AHORA Efecto al seleccionar o hacer hover */
-.xxx:hover,
-.xxx.selected {
-  transform: scale(1.5); /* Agranda la carta */
-  z-index: 10; /* Superpone la carta al resto */
-  border-color: #007bff;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+/* Botones de navegación */
+.nav-button {
+  position: absolute; /* Posición relativa a la .card-carousel */
+  top: 50%; /* Centra verticalmente */
+  transform: translateY(
+    -50%
+  ); /* Ajusta para que el centro del botón quede alineado */
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 18px;
+  transition:
+    background-color 0.3s,
+    transform 0.2s;
+}
+
+.nav-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.1); /* Efecto al pasar el cursor */
+}
+
+/* Botón izquierdo */
+.nav-button.left {
+  left: 20px; /* Posición a la izquierda de la carta */
+}
+
+/* Botón derecho */
+.nav-button.right {
+  right: 20px; /* Posición a la derecha de la carta */
 }
 
 /* Preguntas dentro de la carta */
-.question {
+.questionTop,
+.questionBottom {
   margin: 10px;
-  padding: 15px;
+  padding: 25px;
   text-align: center;
-  background: #f9f9f9;
   border-radius: 5px;
-  border: 1px solid #ddd;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 18px;
   transition:
     background 0.3s,
     color 0.3s;
 }
 
-.question:hover {
-  background: #007bff;
-  color: #fff;
-}
-
 /* Ajuste responsivo para pantallas móviles */
 @media (max-width: 768px) {
   .carta {
-    width: 80px;
-    height: 120px;
+    width: 200px;
+    height: 320px;
   }
-
-  .question {
-    font-size: 10px;
+  .carousel-container {
+    bottom: 15px; /* Ajusta la posición más cerca del borde en pantallas pequeñas */
+    margin-bottom: 15px;
+  }
+  .nav-button {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+  .questionTop,
+  .questionBottom {
+    font-size: 18px; /* Ajusta dinámicamente entre 14px y 18px */
+    text-align: justify; /* Justifica el texto */
+    word-wrap: break-word; /* Ajusta palabras largas para que no desborden */
+    line-height: 1.5; /* Mejora la legibilidad del texto */
+    padding: 5px; /* Añade espacio interno para que no se pegue a los bordes */
+    margin: 0; /* Evita márgenes inesperados */
   }
 }

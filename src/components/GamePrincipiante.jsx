@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Questions } from "./Cartas";
-import { Countries } from "./Cartas";
-import { ANSWERS } from "./Cartas";
+import { Questions } from "./CartasPrincipiante";
+import { Countries } from "./CartasPrincipiante";
+import { ANSWERS } from "./CartasPrincipiante";
 import { NavLink } from "react-router-dom";
 
 import image126 from "../Media/Paises/126.png";
@@ -12,7 +12,7 @@ const shuffleArray = (array) => {
   return array.sort(() => Math.random() - 0.5);
 };
 
-const Game = () => {
+const GamePrincipiante = () => {
   const [selectedCard, setSelectedCard] = useState(); // Índice de la carta seleccionada
   const [selectedCountry] = useState(
     () => Countries[Math.floor(Math.random() * Countries.length)],
@@ -107,4 +107,4 @@ const Game = () => {
   );
 };
 
-export default Game;
+export default GamePrincipiante;
