@@ -1,0 +1,164 @@
+/* Contenedor principal */
+.prelogin-container {
+  position: relative;
+  width: 100vh;
+  height: 100vh;
+  background: linear-gradient(to bottom, #e6f7ff, #d0e6f5); /* Azul claro */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Logo centrado */
+.logo-container .logo {
+  width: 250px; /* Ajusta según tamaño del logo */
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4)); /* Sombra */
+  z-index: 10;
+}
+
+/* Texto "Toca para comenzar" */
+.tap-to-start {
+  position: absolute;
+  bottom: 50px;
+  font-size: 1.5rem;
+  color: #0078d4; /* Azul vibrante */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+}
+
+/* Cartas flotantes */
+.floating-images .card {
+  position: absolute;
+  opacity: 0.8;
+  animation: floatAnimation 8s infinite ease-in-out;
+}
+
+/* Ejemplo de posiciones */
+.card1 {
+  top: 10%;
+  left: 30%;
+  width: 80px;
+  animation-delay: 0s;
+}
+
+.card2 {
+  top: 30%;
+  right: 25%;
+  width: 90px;
+  animation-delay: 2s;
+}
+
+.card3 {
+  bottom: 17%;
+  left: 42%;
+  width: 80px;
+  animation-delay: 4s;
+}
+
+.card4 {
+  top: 5%;
+  right: 35%;
+  width: 40px;
+  animation-delay: 4s;
+  filter: blur(1px);
+}
+
+.card5 {
+  bottom: 42%;
+  left: 25%;
+  width: 70px;
+  animation-delay: 4s;
+}
+
+.card6 {
+  bottom: 30%;
+  right: 35%;
+  width: 50px;
+  animation-delay: 4s;
+  filter: blur(1px);
+}
+
+.card7 {
+  top: 30%;
+  left: 40%;
+  width: 40px;
+  animation-delay: 4s;
+  filter: blur(1px);
+}
+
+.card8 {
+  top: 17%;
+  right: 42%;
+  width: 60px;
+  animation-delay: 4s;
+}
+
+.card9 {
+  bottom: 28%;
+  left: 30%;
+  width: 45px;
+  animation-delay: 4s;
+  filter: blur(1px);
+}
+
+.card10 {
+  bottom: 15%;
+  right: 28%;
+  width: 60px;
+  animation-delay: 4s;
+}
+
+.card11 {
+  top: 18%;
+  right: 29%;
+  width: 40px;
+  animation-delay: 4s;
+  filter: blur(1px);
+}
+
+.card12 {
+  top: 6%;
+  right: 50%;
+  width: 40px;
+  animation-delay: 4s;
+  filter: blur(1px);
+}
+
+.card13 {
+  bottom: 60%;
+  left: 30%;
+  width: 30px;
+  animation-delay: 4s;
+  filter: blur(1px);
+}
+
+.card14 {
+  bottom: 16%;
+  left: 28%;
+  width: 35px;
+  animation-delay: 4s;
+  filter: blur(1px);
+}
+/* Animación de flotación */
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.05);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+@media screen and (max-width: 768px) {
+  .logo {
+    width: 140px; /* Reducir el tamaño del logo */
+  }
+
+  .tap-to-start {
+    font-size: 1em;
+  }
+}

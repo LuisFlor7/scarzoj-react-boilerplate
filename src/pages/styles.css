@@ -1,0 +1,13 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+#simboloArriba {
+  font-size: 70px;
+}
+#simboloAbajo {
+  font-size: 70px;
+  font-display: right;
+  transform: rotate(180deg);
+}
+#numero {
+  font-size: 120px;
+  font-weight: bolder;
+}
